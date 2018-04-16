@@ -1,0 +1,117 @@
+Html中使用<!--注释语句-->
+
+标题标签一共有6个，h1、h2、h3、h4、h5、h6分别为一级标题、二级标题、三级标题、四级标题、五级标题、六级标题。并且依据重要性递减。<h1>是最高的等级(一般用于网站名称)。
+标题标签一般用于文章标题/栏目标题。
+
+段落中需要强调的部分:<strong>表示为粗体</strong>  <em>表示为斜体</em> 
+
+<span>标签为文字设置单独的样式
+
+
+<q>文本</q> 浏览器自动为文本添加双引号，意为引用（简短文本，一句话长短）
+
+<blockquote>引用文本</blockquote> 引用长文本，浏览器会对文本进行“缩进”
+
+
+
+<br /> 相当于word文档中的回车，直接接在需要回车的位置。（html忽略回车和空格）
+&nbsp;  相当于word文档中的空格
+<hr /> 灰色水平分隔线条
+
+
+<address>联系地址信息</address> 在浏览器中默认显示为斜体
+也可以定义一个地址（比如电子邮件地址）、签名或者文档的作者身份。
+
+
+<code>代码语言</code> 用于在文本中插入一行代码，
+<pre>语言代码段</pre> 主要作用:预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符
+
+添加没有前后顺序的新闻信息列表
+<ul>
+<li>信息</li>			
+<li>信息</li>
+...
+</ul>
+
+
+添加有前后顺序的新闻信息列表
+<ol>
+   <li>信息</li>
+   <li>信息</li>
+   ......
+</ol>
+
+
+<div  id="版块名称">…</div>
+划分独立逻辑部分，div标签的设置只是定义了一个块元素，其本身并没有存储任何内容。简单讲div标签就是一个用来装载你想要装载内容的容器
+
+网页中的表格设计
+<table summary = “表格的摘要”>  摘要内容不会再浏览器中显示出来
+<caption>标题文本</caption> 显示表格的文本
+<tr>
+<th></th>表格的开头
+</tr>
+<tr>
+<td></td>表格的列
+</tr>表格的行
+</table>
+注：
+1、table表格在没有添加css样式之前，在浏览器中显示是没有表格线的
+2、表头，也就是th标签中的文本默认为粗体并且居中显示
+
+<a href = “目标网址” title =”鼠标滑过显示的文本” > 链接显示的文本。 </a>
+默认打开是在当前浏览窗口打开，有时候需要在新的浏览器窗口打开,则加入 target=”_blank”
+
+
+
+
+插入图片 <img src="图片地址" alt="下载失败时的替换文本" title = "提示文本">
+
+
+网站使用HTML表单与用户交互：
+<form method = “传送方式(get/post)”  action = “服务器文件”></form>
+所有表单空间(用户要想服务器提交的内容)需放在<form></form>之间
+
+文本/密码输入框：
+<input type = “text/password” name=”名称” value = “文本” />
+1、type：
+   当type="text"时，输入框为文本输入框;
+   当type="password"时, 输入框为密码输入框。
+2、name：为文本框命名，以备后台程序ASP 、PHP使用。
+3、value：为文本输入框设置默认值。(一般起到提示作用)
+
+支持多行文本输入的文本域(当用户需要输入大段文字时)
+<textarea rows = “行数”  cols = “列数”> 默认文本 </textarea>
+
+
+单选框/复选框
+<input type = “radio/checkbox” value =”值”  name = “名称” checked = “checked” / >
+1、type:
+   当 type="radio" 时，控件为单选框
+   当 type="checkbox" 时，控件为复选框
+2、value：提交数据到服务器的值（后台程序PHP使用）
+3、name：为控件命名，以备后台程序 ASP、PHP 使用
+4、checked：当设置 checked="checked" 时，该选项被默认选中
+ 	<label>性别:</label>
+    <label>男</label>
+    <input type="radio" value="1"  name="gender" checked="checked"/>
+    <label>女</label>
+<input type="radio" value="2"  name="gender" />
+
+下拉列表框
+<select>
+<option  valus=”提交给服务器的值” selected=”selected”(默认选中项)> 显示的值 </option>
+</select>
+
+下拉列表进行多选：在<select>标签中设置multiple="multiple"属性
+<select multiple=”multiple”>...</select>
+
+提交按钮：<input type = “submit”  value=”按钮上显示的内容”>
+重置按钮：<input type = “reset”  value=”按钮上显示的内容”>
+
+<label></label>
+label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户改进了可用性。如果你在 label 标签内点击文本，就会触发此控件。
+<label for=”控件ID名称”>标签的 for 属性中的值应当与相关控件的 id 属性值一定要相同。
+
+
+
